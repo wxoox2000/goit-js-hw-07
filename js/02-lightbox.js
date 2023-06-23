@@ -17,13 +17,6 @@ const markup = galleryItems
   .join("");
 list.insertAdjacentHTML("beforeend", markup);
 const gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
-list.addEventListener("click", handlerClick);
-function handlerClick(evt) {
-  let isTarget = evt.target.classList.contains("gallery__image");
-  if (!isTarget) {
-    return;
-  }
-  evt.preventDefault();
-}
+
 
 // console.log(lightbox);
